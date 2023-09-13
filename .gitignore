@@ -1,0 +1,14 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+.idea/
+__pycache__/
+.DS_Store
+.mypy_cache/
+/html/
+build/
+dist/
+/stepversion.egg-info/
+/pyenv-3.11.0/
+.python-version
+.envrc
