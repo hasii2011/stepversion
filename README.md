@@ -39,6 +39,7 @@ Written by [Humberto A. Sanchez II](mailto@humberto.a.sanchez.ii@gmail.com) (C) 
 ## Note
 For all kind of problems, requests, enhancements, bug reports, etc.,
 please drop me an e-mail.
+___
 
 
 ![](https://github.com/hasii2011/code-ally-basic/blob/master/developer/SillyGitHub.png)
