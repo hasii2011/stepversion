@@ -44,19 +44,19 @@ ___
 
 ![](https://github.com/hasii2011/code-ally-basic/blob/master/developer/SillyGitHub.png)
 
-== We're Using GitHub Under Protest ==
+== I am using GitHub under protest ==
 
-This project is currently hosted on GitHub.  This is not ideal; GitHub is a
-proprietary, trade-secret system that is not Free and Open Source Software
-(FOSS).  We are deeply concerned about using a proprietary system like GitHub
-to develop our FOSS project.  We urge you to read about the
+This project is currently hosted on GitHub.  
+
+I urge you to read about the
 [Give up GitHub](https://GiveUpGitHub.org) campaign from
-[the Software Freedom Conservancy](https://sfconservancy.org) to understand
-some of the reasons why GitHub is not a good place to host FOSS projects.
+[the Software Freedom Conservancy](https://sfconservancy.org).
 
-If you are a contributor who personally has already quit using GitHub, please send me
-e-mail for how to send us contributions without
-using GitHub directly.
+While I do not advocate for all the issues listed there I do not like that
+a company like Microsoft may profit from open source projects.
+
+I continue to use GitHub because it offers the services I need for free.  But, I continue
+to monitor their terms of service.
 
 Any use of this project's code by GitHub Copilot, past or present, is done
 without our permission.  We do not consent to GitHub's use of this project's
