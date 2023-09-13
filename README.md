@@ -41,10 +41,9 @@ For all kind of problems, requests, enhancements, bug reports, etc.,
 please drop me an e-mail.
 
 
+![](https://github.com/hasii2011/code-ally-basic/blob/master/developer/SillyGitHub.png)
 
 I am concerned about GitHub's Copilot project
-
-![](https://github.com/hasii2011/code-ally-basic/blob/master/developer/SillyGitHub.png)
 
 I urge you to read about the
 [Give up GitHub](https://GiveUpGitHub.org) campaign from
