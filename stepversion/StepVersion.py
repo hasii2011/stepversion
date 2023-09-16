@@ -3,10 +3,7 @@ from logging import Logger
 from logging import getLogger
 
 from os import linesep as osLineSep
-
-from importlib.abc import Traversable
-
-from importlib.resources import files
+from os import sep as osSep
 
 from click import ClickException
 from click import clear
@@ -48,7 +45,7 @@ class StepVersion(Environment):
     def _readVersionFile(self) -> SemanticVersion:
 
         packageName: str = self._computePackageName()
-        fqFileName:  str = self._getFullyQualifiedVersionFileName(package=packageName, fileName=DEFAULT_FILE_NAME)
+        fqFileName:  str = self._getFullyQualifiedVersionFileName(packageName=packageName)
 
         with open(fqFileName, 'r') as versionFile:
             versionLine: str = versionFile.read()
@@ -71,7 +68,7 @@ class StepVersion(Environment):
     def _writeVersionFile(self, semanticVersion: SemanticVersion):
 
         packageName: str = self._computePackageName()
-        fqFileName:  str = self._getFullyQualifiedVersionFileName(package=packageName, fileName=DEFAULT_FILE_NAME)
+        fqFileName:  str = self._getFullyQualifiedVersionFileName(packageName=packageName)
 
         with open(fqFileName, 'w') as versionFile:
             versionFile.write(f"{VERSION_CODE}'{semanticVersion}'")
@@ -80,19 +77,15 @@ class StepVersion(Environment):
     def _printCallback(self, message: str):
         secho(f'{message}', color=True, reverse=True)
 
-    def _getFullyQualifiedVersionFileName(self, package: str, fileName: str) -> str:
+    def _getFullyQualifiedVersionFileName(self, packageName: str) -> str:
         """
-        Use this method to get other unit test resources
-        Args:
-            package:    The fully qualified package name (dot notation)
-            fileName:   The resources file name
+        Use this method to get the fully qualified version file name
 
         Returns:  A fully qualified path name
         """
+        fullPath: str = f'{self._projectsBase}{osSep}{self._projectDirectory}{osSep}{packageName}{osSep}{DEFAULT_FILE_NAME}'
 
-        traversable: Traversable = files(package) / fileName
-
-        return str(traversable)
+        return fullPath
 
     def _computePackageName(self) -> str:
 
@@ -102,6 +95,7 @@ class StepVersion(Environment):
             packageName = self._packageName
 
         return packageName
+
 
 @command()
 @version_option(version=f'{__version__}', message='%(version)s')
@@ -132,5 +126,5 @@ def commandHandler(major: int, minor: int, patch: int, package_name: str):
 
 
 if __name__ == "__main__":
-
-    commandHandler(['-p', '1', '-a', 'stepversion'])
+    # noinspection SpellCheckingInspection
+    commandHandler(['-p', '1', '-a', 'codeallyadvanced'])
