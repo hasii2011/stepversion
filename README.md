@@ -6,7 +6,7 @@
 
 # Introduction
 
-A simple python console script to let me bump package version numbers easily and at will
+A simple python console script to let me bump package version numbers easily and at will.
 
 # Overview
 
@@ -15,14 +15,30 @@ The basic command structure is:
 ```
 Usage: stepversion [OPTIONS]
 
+  Args:     major:     minor:     patch:     package_name
+
 Options:
-  --version         Show the version and exit.
-  -m, --major TEXT  Bump major version
-  -i, --minor TEXT  Bump minor version
-  -p, --patch TEXT  Bump patch version
-  --help            Show this message and exit.
+  --version                Show the version and exit.
+  -m, --major INTEGER      Bump major version (default 1)
+  -i, --minor INTEGER      Bump minor version (default 1)
+  -p, --patch INTEGER      Bump patch version (default 1)
+  -a, --package-name TEXT  Use this option when the package name does not
+                           match the project name
+  --help                   Show this message and exit.
+
 ```
 
+# Opinionated Expectations
+
+The project keeps a `_version.py` file in the main package.
+
+The format of the file is:
+
+```python
+__version__: str = 'A Semantic Version'
+```
+
+See [Semantic Versioning](https://semver.org)
 
 # Installation
 
@@ -31,7 +47,7 @@ Options:
 
 ___
 
-Written by [Humberto A. Sanchez II](mailto@humberto.a.sanchez.ii@gmail.com) (C) 2023
+Written by <a href="mailto:email@humberto.a.sanchez.ii@gmail.com?subject=Hello Humberto">Humberto A. Sanchez II</a>  (C) 2023
 
  
 
