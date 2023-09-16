@@ -9,6 +9,6 @@ __pycache__/
 build/
 dist/
 /stepversion.egg-info/
-/pyenv-3.11.0/
+/pyenv-3.11.5/
 .python-version
 .envrc
